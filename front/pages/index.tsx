@@ -67,7 +67,7 @@ const Home: NextPage = () => {
           <MainButtonHoverWrapper $guide>
             <MainButton
               $guide
-              ref={(ref) => (btnRef.current[0] = ref)}
+              ref={(ref: HTMLDivElement | null) => (btnRef.current[0] = ref)}
               $backgroundImage="/images/faq.png">
               학습가이드
             </MainButton>
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
             <Link href={item.link} key={item.buttonName} passHref>
               <MainButtonHoverWrapper>
                 <MainButton
-                  ref={(ref) => (btnRef.current[idx + 1] = ref)}
+                  ref={(ref: HTMLDivElement | null) => (btnRef.current[idx + 1] = ref)}
                   className={css({ backgroundColor: item.buttonColor })}
                   $backgroundImage={item.backgroundImage}
                   onClick={(e: React.MouseEvent<HTMLDivElement>) => buttonClickHandler(e, idx)}>
