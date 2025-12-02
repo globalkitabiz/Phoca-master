@@ -6,7 +6,12 @@ import {
   NextScript,
   DocumentContext,
 } from "next/document";
-import { Server, Sheet } from "styletron-engine-atomic";
+import { Server } from "styletron-engine-atomic";
+
+interface Sheet {
+  css: string;
+  attrs: { media?: string; "data-hydrate"?: string };
+}
 import { Provider as StyletronProvider } from "styletron-react";
 import { styletron } from "@utils/styletron";
 
