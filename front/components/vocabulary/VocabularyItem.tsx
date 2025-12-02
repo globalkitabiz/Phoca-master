@@ -173,7 +173,7 @@ const VocabularyItem: FC<itemProps> = ({ listItem, isMine }) => {
                       <LockBtn onClick={() => vocaChangeHandler(item)}>
                         {item.secured ? <FaLock /> : <MdPublic />}
                       </LockBtn>
-                      <LockBtn onClick={(e) => editHandler(e, item.wordbookId)}>
+                      <LockBtn onClick={(e: React.MouseEvent<HTMLDivElement>) => editHandler(e, item.wordbookId)}>
                         <FaEdit />
                       </LockBtn>
                     </>

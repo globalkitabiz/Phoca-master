@@ -82,7 +82,7 @@ const Home: NextPage = () => {
                   ref={(ref) => (btnRef.current[idx + 1] = ref)}
                   className={css({ backgroundColor: item.buttonColor })}
                   $backgroundImage={item.backgroundImage}
-                  onClick={(e) => buttonClickHandler(e, idx)}>
+                  onClick={(e: React.MouseEvent<HTMLDivElement>) => buttonClickHandler(e, idx)}>
                   {item.buttonName}
                 </MainButton>
               </MainButtonHoverWrapper>

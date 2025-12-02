@@ -39,7 +39,7 @@ const WordQuizCard = ({
   return (
     <CardItem
       $flip={flip}
-      onClick={(e) => handleClick(e, value.data)}
+      onClick={(e: React.MouseEvent<HTMLDivElement>) => handleClick(e, value.data)}
       className={`${flip ? "flip" : ""}`}
       $matched={value.matched}>
       <CardFront>
