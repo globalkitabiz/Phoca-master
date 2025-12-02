@@ -14,17 +14,13 @@ function SideBar() {
 
   const [loginModalOpen, setLoginModalOpen] = useState(false); // 로그인 페이지로 연결 여부
 
-  const sidebarBtnClickHandler = (
-    e: React.MouseEvent<HTMLDivElement>,
-    link: string,
-  ) => {
+  const sidebarBtnClickHandler = (link: string) => {
     const userToken = sessionStorage.getItem("userToken");
 
     if (
       (!userToken && link === "/myPage") ||
       (!userToken && link === "/wordQuiz")
     ) {
-      e.preventDefault();
       setLoginModalOpen(true);
     }
   };
@@ -43,7 +39,7 @@ function SideBar() {
                 backgroundColor: item.buttonColor,
               })}
               $headerHeight={HEADER_HEIGHT}
-              onClick={(e) => sidebarBtnClickHandler(e, item.link)}>
+              onClick={() => sidebarBtnClickHandler(item.link)}>
               {item.buttonName}
             </SideBarBtn>
           </Link>
