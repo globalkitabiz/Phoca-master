@@ -4,10 +4,7 @@ import { MenuItem } from "./Guide.style";
 import { useEffect } from "react";
 
 const MenuList = ({ selected, setSelected }: GuideMenuButtonProps) => {
-  const buttonClickHandler = (
-    e: React.MouseEvent<HTMLLIElement>,
-    name: string,
-  ) => {
+  const buttonClickHandler = (name: string) => {
     setSelected(name);
   };
 
@@ -22,7 +19,7 @@ const MenuList = ({ selected, setSelected }: GuideMenuButtonProps) => {
           <MenuItem
             key={item.buttonName}
             $onClicked={selected === item.buttonName}
-            onClick={(e) => buttonClickHandler(e, item.buttonName)}>
+            onClick={() => buttonClickHandler(item.buttonName)}>
             {item.buttonName}
           </MenuItem>
         );
