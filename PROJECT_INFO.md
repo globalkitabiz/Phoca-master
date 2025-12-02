@@ -42,7 +42,28 @@
 
 ---
 
-## 서비스별 역할 정리
+## 서비스별 역할 요약
+
+| 서비스 | 역할 | 설명 |
+|--------|------|------|
+| **Cloudflare Pages** | 프론트엔드 호스팅 | Next.js 웹앱을 전 세계 CDN으로 배포 |
+| **Railway** | 백엔드 API 서버 | NestJS 서버로 인증, CRUD, AI 호출 등 모든 백엔드 로직 처리 |
+| **Supabase** | 데이터베이스 | PostgreSQL DB로 사용자, 단어장, 단어, 북마크, 퀴즈 기록 저장 |
+| **Cloudflare R2** | 이미지 저장소 | S3 호환 스토리지로 사용자 업로드 이미지, AI 인식 이미지 저장 |
+| **Replicate** | AI 모델 API | 이미지에서 객체 인식(YOLO), 그림 분석(CLIP) |
+| **Google Translate** | 번역 API | 인식된 영어 단어를 한국어로 자동 번역 |
+
+### 데이터 흐름 (사진으로 단어장 만들기)
+```
+사용자 사진 업로드 → Cloudflare R2에 저장
+                  → Replicate AI가 객체 인식
+                  → Google Translate로 번역
+                  → Supabase DB에 단어 저장
+```
+
+---
+
+## 서비스별 상세 정보
 
 ### 1. Cloudflare Pages (Frontend)
 | 항목 | 내용 |
