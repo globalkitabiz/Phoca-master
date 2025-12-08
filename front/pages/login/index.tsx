@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Seo from "@common/Seo";
@@ -30,14 +29,7 @@ const Login: NextPage = () => {
   return (
     <>
       <Seo title="로그인" />
-      <AuthCardContainer>
-        <Image
-          alt="loginpage-background-image"
-          src="/images/loginBg.jpg"
-          layout="fill"
-          objectFit="cover"
-          priority={true}
-        />
+      <AuthCardContainer style={{ backgroundImage: "url('/images/loginBg.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <Card>
           <TitleContainer>
             <Link href="/">

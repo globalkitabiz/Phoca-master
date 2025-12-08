@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Seo from "@common/Seo";
 import RegisterPage from "@userComp/RegisterPage";
 import {
@@ -15,14 +14,7 @@ const Register: NextPage = () => {
   return (
     <>
       <Seo title="회원가입" />
-      <AuthCardContainer>
-        <Image
-          alt="registerpage-background-image"
-          src="/images/registerBg.jpg"
-          layout="fill"
-          objectFit="cover"
-          priority={true}
-        />
+      <AuthCardContainer style={{ backgroundImage: "url('/images/registerBg.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
         <Card>
           <TitleContainer>
             <Link href="/">

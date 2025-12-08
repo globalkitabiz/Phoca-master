@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { useQuery } from "react-query";
@@ -137,7 +136,7 @@ function WordQuiz() {
         $sidebarWidth={SIDEBAR_WIDTH}>
         {Object.entries(card).map(([key, value]) => (
           <Card key={key}>
-            <Image src={value.src} alt={key} width={400} height={350} />
+            <img src={value.src} alt={key} width={400} height={350} style={{ objectFit: "contain" }} />
             <Title>{value.title}</Title>
             <BtnContainer>
               <Button $small={small} onClick={() => btnClickHandler(key)}>

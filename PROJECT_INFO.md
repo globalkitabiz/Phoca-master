@@ -188,7 +188,7 @@ NEXT_PUBLIC_IMAGE_URL=https://pub-2b336b019958442583369863e931a947.r2.dev/
 
 ---
 
-## 배포 상태
+## 배포 상태https://phoca-master.pages.dev/
 
 | 서비스 | 상태 | URL |
 |--------|------|-----|
@@ -198,7 +198,7 @@ NEXT_PUBLIC_IMAGE_URL=https://pub-2b336b019958442583369863e931a947.r2.dev/
 | Google Translate | ✅ 완료 | 서비스 계정 생성 완료 |
 | Railway Backend | ✅ 완료 | `https://phoca-master-production.up.railway.app` |
 | Cloudflare Pages | 🔄 진행중 | 빌드 설정 조정 필요 |
-
+##홈페이지 https://phoca-master.pages.dev/
 ---
 
 ## 예상 월 비용
