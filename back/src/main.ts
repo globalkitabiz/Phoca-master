@@ -22,12 +22,10 @@ async function bootstrap() {
 
   Logger.log(`Application running on port ${port}`);
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      'https://phoca-master.pages.dev',
-    ],
+    origin: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
     credentials: true,
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   });
   await app.listen(port);
 }
